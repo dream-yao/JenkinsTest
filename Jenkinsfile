@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
