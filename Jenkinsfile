@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'source /var/lib/jenkins/workspace/venv/bin/activate && python test.py'
+                //sh 'source /var/lib/jenkins/workspace/venv/bin/activate && python test.py'
+                sh 'source /var/lib/jenkins/workspace/venv/bin/activate && pip list'
                 echo 'api has lanched'
             }
         }
