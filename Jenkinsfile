@@ -4,16 +4,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'cd /home/sun && ls'
-                // sh 'source /home/sun/venv/bin/activate'
-                // sh 'python test.py'
+                sh 'source venv/bin/activate && python test.py'
                 echo 'api has lanched'
             }
         }
         stage('test') {
             steps {
-                // sh 'source /home/sun/venv/bin/activate'
-                // sh 'python -m unittest api_test.py'
+                sh 'source venv/bin/activate && python -m unittest api_test.py'
                 echo 'test has finished'
                 /* publishHTML (target : [allowMissing: false,
                 alwaysLinkToLastBuild: true,
