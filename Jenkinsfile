@@ -1,12 +1,15 @@
-#!/usr/bin/env groovy
-
-Jenkinsfile (Declarative Pipeline)
+// Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
     stages {
-        stage('Stage 1') {
+        stage('build') {
             steps {
-                echo 'Hello world!'
+                sh 'python3 test.py'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'python3 api_test.py'
             }
         }
     }
