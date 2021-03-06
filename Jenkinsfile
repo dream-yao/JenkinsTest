@@ -4,6 +4,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'cd /home'
+                sh 'pwd'
                 // sh 'source /home/sun/venv/bin/activate'
                 // sh 'python test.py'
                 echo 'api has lanched'
