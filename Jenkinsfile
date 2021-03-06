@@ -5,13 +5,13 @@ pipeline {
         stage('build') {
             steps {
                 //sh 'source /var/lib/jenkins/workspace/venv/bin/activate && python test.py'
-                sh 'source /var/lib/jenkins/workspace/venv/bin/activate && pip list'
+                sh 'source /home/sun/venv/bin/activate && pip list'
                 echo 'api has lanched'
             }
         }
         stage('test') {
             steps {
-                sh 'source /var/lib/jenkins/workspace/venv/bin/activate && python -m unittest api_test.py'
+                sh 'source /home/sun/venv/bin/activate && python -m unittest api_test.py'
                 echo 'test has finished'
                 /* publishHTML (target : [allowMissing: false,
                 alwaysLinkToLastBuild: true,
